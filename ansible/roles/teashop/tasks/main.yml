@@ -1,0 +1,9 @@
+---
+- name: Clone a repo with separate git directory
+  git: repo={{ git_app_repo }}
+       dest={{ app_dir }}
+
+- name: Deploy
+  command: "docker-compose -f docker-compose.yml up -d"
+  args:
+    chdir: "{{ app_dir }}"

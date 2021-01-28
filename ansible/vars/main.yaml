@@ -1,0 +1,12 @@
+---
+app_root: /var/www/teashop
+app_name: tea-shop
+app_user: www-data
+app_dir: /home/kursova
+
+# Application git repo
+git_app_repo: https://github.com/VolodymyrPastukh/tea-shop.git
+git_ssh_key: /home/vova/.ssh/id_rsa.pub
+
+sys_user: vova
+service_address: SERVICE_ADDRESS

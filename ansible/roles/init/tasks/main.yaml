@@ -1,0 +1,17 @@
+---
+ #Add Nginx repositories, update and upgrade packages
+ #Also install all required packages
+
+- name: Run apt-get update
+  apt: update_cache=yes
+
+- name: Update all packages
+  apt: upgrade=dist
+
+- name: Install and ensure packages required
+  apt: pkg=python state=present
+  become: true
+
+- name: Install and ensure packages required
+  apt: pkg=git state=present
+  become: true
